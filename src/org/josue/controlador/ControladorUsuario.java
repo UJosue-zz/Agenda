@@ -1,6 +1,7 @@
 package org.josue.controlador;
 
 import org.josue.db.Conexion;
+import org.josue.bean.Usuario;
 
 public class ControladorUsuario {
 	private static ControladorUsuario instancia;
@@ -15,4 +16,9 @@ public class ControladorUsuario {
 				+ "AND contraseña = " + contraseña);
 	}
 	
+	Usuario usuario = new Usuario();
+	
+	public Usuario getUsuario(){
+		return usuario;
+	}
 }
