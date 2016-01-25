@@ -1,30 +1,33 @@
 package org.josue.servlet.agenda;
 
 import java.io.IOException;
-import java.sql.SQLException;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.swing.JOptionPane;
 
+import org.josue.controlador.ControladorContacto;
 import org.josue.controlador.ControladorUsuario;
+import org.josue.db.Conexion;
 
-public class Ingresar extends HttpServlet {
-	
+public class AgregarContacto extends HttpServlet {
 	public void doPost(HttpServletRequest req, HttpServletResponse res)throws IOException,ServletException{
-		String usuario = req.getParameter("txtUsuario");
-		String contraseña = req.getParameter("txtContrasena");
+		String nombre = req.getParameter("txtNombre");
+		Integer telCasa = Integer.parseInt(req.getParameter("txtTelCasa"));
+		Integer telMovil = Integer.parseInt(req.getParameter("txtTelMovil"));
+		String correo = req.getParameter("txtCorreo");
+		String direccion = req.getParameter("txtDireccion");
+		
+		ControladorContacto.getInstancia().Agregar(nombre, telCasa, telMovil, correo, direccion);
+		
+		JOptionPane.showMessageDialog(null, "Agregado Correctamente a: " + nombre);
 		RequestDispatcher despachador=null;
 		
-		ControladorUsuario.getInstancia().Ingresar(usuario, contraseña);
 		
-		/*ControladorUsuario.getInstancia().getUsuario().setNick(usuario);
-		ControladorUsuario.getInstancia().getUsuario().setContraseña(contraseña);*/
-
+		
 		despachador=req.getRequestDispatcher("agenda/inicio.jsp");
 		despachador.forward(req, res);
 }

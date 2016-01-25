@@ -50,103 +50,18 @@
 								<div class="inner">
 
 									<section>
-										<h3 class="major">Text</h3>
-										<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-										This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-										This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-										<h4>Blockquote</h4>
-										<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-										<h4>Preformatted</h4>
-										<pre><code>i = 0;
-
-while (!deck.isInOrder()) {
-  print 'Iteration ' + i;
-  deck.shuffle();
-  i++;
-}
-
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-									</section>
+										<h3 class="major">Contactos</h3>
 
 									<section>
-										<h3 class="major">Lists</h3>
-										<div class="row">
-											<div class="6u 12u$(medium)">
-												<h4>Unordered</h4>
-												<ul>
-													<li>Dolor pulvinar etiam.</li>
-													<li>Sagittis adipiscing.</li>
-													<li>Felis enim feugiat.</li>
-												</ul>
-												<h4>Alternate</h4>
-												<ul class="alt">
-													<li>Dolor pulvinar etiam.</li>
-													<li>Sagittis adipiscing.</li>
-													<li>Felis enim feugiat.</li>
-												</ul>
-											</div>
-											<div class="6u$ 12u$(medium)">
-												<h4>Ordered</h4>
-												<ol>
-													<li>Dolor pulvinar etiam.</li>
-													<li>Etiam vel felis viverra.</li>
-													<li>Felis enim feugiat.</li>
-													<li>Dolor pulvinar etiam.</li>
-													<li>Etiam vel felis lorem.</li>
-													<li>Felis enim et feugiat.</li>
-												</ol>
-												<h4>Icons</h4>
-												<ul class="icons">
-													<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-													<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-													<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-													<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-												</ul>
-											</div>
-										</div>
-										<h4>Actions</h4>
-										<div class="row">
-											<div class="6u 12u$(medium)">
-												<ul class="actions">
-													<li><a href="#" class="button special">Default</a></li>
-													<li><a href="#" class="button">Default</a></li>
-												</ul>
-												<ul class="actions small">
-													<li><a href="#" class="button special small">Small</a></li>
-													<li><a href="#" class="button small">Small</a></li>
-												</ul>
-												<ul class="actions vertical">
-													<li><a href="#" class="button special">Default</a></li>
-													<li><a href="#" class="button">Default</a></li>
-												</ul>
-												<ul class="actions vertical small">
-													<li><a href="#" class="button special small">Small</a></li>
-													<li><a href="#" class="button small">Small</a></li>
-												</ul>
-											</div>
-											<div class="6u 12u$(medium)">
-												<ul class="actions vertical">
-													<li><a href="#" class="button special fit">Default</a></li>
-													<li><a href="#" class="button fit">Default</a></li>
-												</ul>
-												<ul class="actions vertical small">
-													<li><a href="#" class="button special small fit">Small</a></li>
-													<li><a href="#" class="button small fit">Small</a></li>
-												</ul>
-											</div>
-										</div>
-									</section>
-
-									<section>
-										<h3 class="major">Table</h3>
-										<h4>Default</h4>
 										<div class="table-wrapper">
 											<table>
 												<thead>
 													<tr>
-														<th>Name</th>
-														<th>Description</th>
-														<th>Price</th>
+														<th>Nombre</th>
+														<th>Teléfono de casa</th>
+														<th>Teléfono móvil</th>
+														<th>Correo</th>
+														<th>Dirección</th>
 													</tr>
 												</thead>
 												<tbody>
