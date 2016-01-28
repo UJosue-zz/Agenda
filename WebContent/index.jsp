@@ -14,7 +14,6 @@
 			<header id="header">
 				<h1>Agenda</h1>
 				<p>Tus amigos en un solo lugar<br />
-				Developed by <a href="https://twitter.com/UJosue10">UJosue</a>.</p>
 			</header>
 
 		<!-- Signup Form -->
@@ -22,7 +21,18 @@
 				<input type="text" name="txtUsuario" placeholder="Usuario" />
 				<br>
 				<input type="password" name="txtContrasena" placeholder="Contraseña" />
-				<input type="submit"/>
+				<br>
+				<input type="submit" value="Ingresar"/>
+			</form>
+			
+			<!-- Register Form -->
+			<form action="AgregarUsuario.do" method="post">
+			<!-- <p>Registrate!</p>  -->
+				<input type="text" name="txtNick" placeholder="Nick" />
+				<br>
+				<input type="password" name="txtContrasena" placeholder="Contraseña" />
+				<br>
+				<input type="submit" value="Registrarme"/>
 			</form>
 
 		<!-- Footer -->

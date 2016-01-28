@@ -30,6 +30,7 @@ public class Conexion {
 			rs=stm.executeQuery(consulta);
 		} catch (SQLException e) {
 			e.printStackTrace();
+			System.out.println("De clase conexión.java");
 		}
 		return rs;
 	}

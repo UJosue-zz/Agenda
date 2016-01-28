@@ -26,11 +26,10 @@
 						<div class="inner">
 							<h2>Menu</h2>
 							<ul class="links">
-								<li><a href="index.html">Home</a></li>
-								<li><a href="generic.html">Agregar U</a></li>
-								<li><a href="elements.html">Elements</a></li>
-								<li><a href="#">Log In</a></li>
-								<li><a href="#">Sign Up</a></li>
+								<li><a href="index.html">Contactos</a></li>
+								<li><a href="generic.html">Agregar Contacto</a></li>
+								<li><a href="elements.html">Configuración</a></li>
+								<li><a href="#">Sign Out</a></li>
 							</ul>
 							<a href="#" class="close">Close</a>
 						</div>
