@@ -10,10 +10,9 @@ public class ControladorContacto {
 		}
 		
 		public void Agregar(String nombre, Integer telCasa, Integer telMovil,
-				String correo, String direccion){
-			Integer idUsuario = ControladorUsuario.getInstancia().getUsuario().getIdUsuario();
+				String correo, String direccion, Integer idUsuario){
 			Conexion.getInstancia().EjecutarConsulta("INSERT INTO contacto (`nombre`, `telCasa`, `telMovil`, `correo`, `direccion`, `idUsuario`)"
-					+ " VALUES (' " + nombre + "', " + telCasa + ", " + telMovil + ", '" + correo + "', '" + direccion  +"'" + idUsuario + ")");
+					+ " VALUES (' " + nombre + "', " + telCasa + ", " + telMovil + ", '" + correo + "', '" + direccion  +"',{" + idUsuario + ")");
 		}
 
 	

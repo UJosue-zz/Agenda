@@ -9,25 +9,33 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.swing.JOptionPane;
 
+import org.josue.bean.Usuario;
 import org.josue.controlador.ControladorUsuario;
+import org.josue.db.Encriptar;
 
 public class Ingresar extends HttpServlet {
-	
 	public void doPost(HttpServletRequest req, HttpServletResponse res)throws IOException,ServletException{
+		
 		String usuario = req.getParameter("txtUsuario");
-		String contraseña = req.getParameter("txtContrasena");
+		String contraseña = Encriptar.getInstancia().getMD5(req.getParameter("txtContrasena"));
 		RequestDispatcher despachador=null;
 		
-		ControladorUsuario.getInstancia().Ingresar(usuario, contraseña);
-		
-		/*ControladorUsuario.getInstancia().getUsuario().setNick(usuario);
-		ControladorUsuario.getInstancia().getUsuario().setContraseña(contraseña);*/
-
-		despachador=req.getRequestDispatcher("agenda/inicio.jsp");
-		despachador.forward(req, res);
+		if(ControladorUsuario.getInstancia().Ingresar(usuario, contraseña) == true){
+			HttpSession sesion= req.getSession(true);
+			sesion.setAttribute("usuario", idUsuario);
+			System.out.println("Sesion iniciada " + idUsuario);
+			despachador=req.getRequestDispatcher("agenda/inicio.jsp");
+			despachador.forward(req, res);
+		}else{
+			System.out.println("El usuario no fue encontrado");
+			despachador=req.getRequestDispatcher("index.jsp");
+			despachador.forward(req, res);
+		}
 }
+	
 public void doGet(HttpServletRequest req, 
 		HttpServletResponse res)throws IOException,ServletException{
 	doPost(req,res);

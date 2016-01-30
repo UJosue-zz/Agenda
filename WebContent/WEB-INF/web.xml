@@ -20,4 +20,12 @@
     <servlet-name>AgregarUsuario</servlet-name>
     <url-pattern>/AgregarUsuario.do</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>AgregarContacto</servlet-name>
+    <servlet-class>org.josue.servlet.agenda.AgregarContacto</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AgregarContacto</servlet-name>
+    <url-pattern>/AgregarContacto.do</url-pattern>
+  </servlet-mapping>
 </web-app>
