@@ -2,6 +2,7 @@ package org.josue.controlador;
 
 import org.josue.db.Conexion;
 import org.josue.db.Encriptar;
+import org.josue.servlet.agenda.Ingresar;
 
 import java.awt.HeadlessException;
 import java.sql.ResultSet;
@@ -11,6 +12,7 @@ import java.util.List;
 import javax.swing.JOptionPane;
 
 import org.josue.bean.Usuario;
+
 
 public class ControladorUsuario {
 	private static ControladorUsuario instancia;
@@ -27,6 +29,7 @@ public class ControladorUsuario {
 			while(rs.next()){
 				String userdb = rs.getString("nick");
 				String passdb = rs.getString("contraseña");
+				Integer iddb = rs.getInt("idUsuario");
 				if(userdb.equals(usuario) && passdb.equals(contraseña)){
 					System.out.println("Usuario encontrado " + rs.getInt("idUsuario"));
 					encontrado = true;

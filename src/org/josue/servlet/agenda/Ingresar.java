@@ -1,6 +1,7 @@
 package org.josue.servlet.agenda;
 
 import java.io.IOException;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import javax.servlet.RequestDispatcher;
@@ -14,6 +15,7 @@ import javax.swing.JOptionPane;
 
 import org.josue.bean.Usuario;
 import org.josue.controlador.ControladorUsuario;
+import org.josue.db.Conexion;
 import org.josue.db.Encriptar;
 
 public class Ingresar extends HttpServlet {
@@ -25,6 +27,18 @@ public class Ingresar extends HttpServlet {
 		
 		if(ControladorUsuario.getInstancia().Ingresar(usuario, contraseña) == true){
 			HttpSession sesion= req.getSession(true);
+			Integer idUsuario = 0;
+			ResultSet rs = Conexion.getInstancia().obtenerConsulta("Select * From usuario");
+			try {
+				while(rs.next()){
+					if(usuario.equals(rs.getString("nick"))){
+						idUsuario = rs.getInt("idUsuario");
+					}
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
+				System.out.println("Error en Ingresar.java (1)");
+			}
 			sesion.setAttribute("usuario", idUsuario);
 			System.out.println("Sesion iniciada " + idUsuario);
 			despachador=req.getRequestDispatcher("agenda/inicio.jsp");
