@@ -24,12 +24,8 @@ public class AgregarContacto extends HttpServlet {
 		Integer telCasa = new Integer(req.getParameter("txtTelCasa"));
 		Integer telMovil = new Integer(req.getParameter("txtTelMovil"));
 		Integer idUsuario = (Integer) sesion.getAttribute("idUsuario");
-		
 		ControladorContacto.getInstancia().Agregar(nombre, telCasa, telMovil, correo, direccion, idUsuario);
-		
-		
-		
-		
+		req.setAttribute("listaContacto", ControladorContacto.getInstancia().listar(idUsuario));
 		RequestDispatcher despachador=null;
 		despachador=req.getRequestDispatcher("agenda/inicio.jsp");
 		despachador.forward(req, res);
