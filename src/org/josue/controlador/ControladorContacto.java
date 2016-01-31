@@ -46,4 +46,9 @@ public class ControladorContacto {
 			}
 			return listado;
 		}
+		
+		public void Eliminar(Integer idContacto){
+			System.out.println("Se elimino el contacto " + idContacto);
+			Conexion.getInstancia().EjecutarConsulta("delete from contacto where idContacto = " + idContacto);
+		}
 }

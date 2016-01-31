@@ -28,4 +28,12 @@
     <servlet-name>AgregarContacto</servlet-name>
     <url-pattern>/AgregarContacto.do</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>EliminarContacto</servlet-name>
+    <servlet-class>org.josue.servlet.agenda.EliminarContacto</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EliminarContacto</servlet-name>
+    <url-pattern>/EliminarContacto.do</url-pattern>
+  </servlet-mapping>
 </web-app>

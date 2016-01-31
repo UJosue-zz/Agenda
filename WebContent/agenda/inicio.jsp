@@ -62,6 +62,7 @@
 														<th>Teléfono móvil</th>
 														<th>Correo</th>
 														<th>Dirección</th>
+														<th>Opciones</th>
 													</tr>
 												</thead>
 												<tbody>
@@ -72,6 +73,12 @@
 															<td>${contacto.getTelMovil()}</td>
 															<td>${contacto.getCorreo()}</td>
 															<td>${contacto.getDireccion()}</td>
+															<td>
+																<ul class="actions">
+																	<li><a href="#" class="fa fa-pencil-square-o"></a></li>
+																	<li><a href="EliminarContacto.do?idContacto=${contacto.getIdContacto()}" class="fa fa-minus"></a></li>
+																</ul>
+															</td>
 														</tr>
 													</c:forEach>
 												</tbody>
