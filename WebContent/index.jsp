@@ -18,9 +18,9 @@
 
 		<!-- Signup Form -->
 			<form action="Ingresar.do" method="post">
-				<input type="text" name="txtUsuario" placeholder="Usuario" />
+				<input type="text" required name="txtUsuario" placeholder="Usuario" />
 				<br>
-				<input type="password" name="txtContrasena" placeholder="Contraseña" />
+				<input type="password" required name="txtContrasena" placeholder="Contraseña" />
 				<br>
 				<input type="submit" value="Ingresar"/>
 			</form>
@@ -28,9 +28,9 @@
 			<!-- Register Form -->
 			<form action="AgregarUsuario.do" method="post">
 			<!-- <p>Registrate!</p>  -->
-				<input type="text" name="txtNick" placeholder="Nick" />
+				<input type="text" required name="txtNick" placeholder="Nick" />
 				<br>
-				<input type="password" name="txtContrasena" placeholder="Contraseña" />
+				<input type="password" required name="txtContrasena" placeholder="Contraseña" />
 				<br>
 				<input type="submit" value="Registrarme"/>
 			</form>

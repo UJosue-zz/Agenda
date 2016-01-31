@@ -137,7 +137,7 @@
 											<div class="row uniform">
 												<div class="6u 12u$(xsmall)">
 													<label>Nombre</label>
-													<input type="text" name="txtNombre"/>
+													<input type="text" required name="txtNombre"/>
 												</div>
 												<div class="6u$ 12u$(xsmall)">
 													<label>Correo</label>
@@ -173,7 +173,7 @@
 					<section id="footer">
 						<div class="inner">
 							<ul class="copyright">
-								<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+								<li>&copy; UJosue. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 							</ul>
 						</div>
 					</section>

@@ -39,8 +39,8 @@ public class Ingresar extends HttpServlet {
 				e.printStackTrace();
 				System.out.println("Error en Ingresar.java (1)");
 			}
-			sesion.setAttribute("usuario", idUsuario);
-			System.out.println("Sesion iniciada " + idUsuario);
+			sesion.setAttribute("idUsuario", idUsuario);
+			System.out.println("Sesion iniciada de " + usuario);
 			despachador=req.getRequestDispatcher("agenda/inicio.jsp");
 			despachador.forward(req, res);
 		}else{

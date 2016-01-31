@@ -23,11 +23,9 @@ public class AgregarContacto extends HttpServlet {
 		String direccion = req.getParameter("txtDireccion");
 		Integer telCasa = new Integer(req.getParameter("txtTelCasa"));
 		Integer telMovil = new Integer(req.getParameter("txtTelMovil"));
-		Usuario usuario = (Usuario) sesion.getAttribute("usuario");
-		//String idUsuario =  usuario.getIdUsuario();
-		System.out.println(usuario.getIdUsuario());
+		Integer idUsuario = (Integer) sesion.getAttribute("idUsuario");
 		
-		//ControladorContacto.getInstancia().Agregar(nombre, telCasa, telMovil, correo, direccion, idUsuario);
+		ControladorContacto.getInstancia().Agregar(nombre, telCasa, telMovil, correo, direccion, idUsuario);
 		
 		
 		
