@@ -51,4 +51,38 @@ public class ControladorContacto {
 			System.out.println("Se elimino el contacto " + idContacto);
 			Conexion.getInstancia().EjecutarConsulta("delete from contacto where idContacto = " + idContacto);
 		}
+		
+		public 	Contacto Buscar(Integer idContacto){
+			ResultSet rs = Conexion.getInstancia().obtenerConsulta("Select * from contacto where idContacto = " + idContacto);
+			Contacto contacto = null;
+			try {
+				while(rs.next()){
+					contacto = new Contacto(
+							rs.getInt("idContacto"),
+							rs.getString("nombre"),
+							rs.getInt("telCasa"),
+							rs.getInt("telMovil"),
+							rs.getString("correo"),
+							rs.getString("direccion"),
+							rs.getInt("idUsuario")
+							);
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
+				System.out.println("Error en ControladorContacto.java [2]");
+			}
+			return contacto;
+		}
+		
+		public void Editar(Contacto contacto){
+			Conexion.getInstancia().EjecutarConsulta("UPDATE contacto SET "
+						+ "nombre = '" + contacto.getNombre() + "', "
+						+ "telCasa = " + contacto.getTelCasa() + ", "
+						+ "telMovil = " + contacto.getTelMovil() + ", "
+						+ "correo = '" + contacto.getCorreo() + "', "
+						+ "direccion = '" + contacto.getDireccion() + "', "
+						+ "idUsuario = " + contacto.getIdUsuario() + " "
+							+ "WHERE idContacto = " + contacto.getIdContacto());
+			System.out.println("Direccion: " + contacto.getDireccion());
+		}
 }

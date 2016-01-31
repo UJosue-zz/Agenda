@@ -75,7 +75,7 @@
 															<td>${contacto.getDireccion()}</td>
 															<td>
 																<ul class="actions">
-																	<li><a href="#" class="fa fa-pencil-square-o"></a></li>
+																	<li><a href="CargarContacto.do?idContacto=${contacto.getIdContacto()}" class="fa fa-pencil-square-o"></a></li>
 																	<li><a href="EliminarContacto.do?idContacto=${contacto.getIdContacto()}" class="fa fa-minus"></a></li>
 																</ul>
 															</td>
