@@ -1,10 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ taglib prefix="c"  
+	uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html>
 <html>
 <head>
-<title>Eventually by HTML5 UP</title>
-		<title>Elements - Solid State by HTML5 UP</title>
+<title>Agenda</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main-two.css" />
@@ -12,7 +13,7 @@
 <body>
 	<!-- Page Wrapper -->
 			<div id="page-wrapper">
-
+			
 				<!-- Header -->
 					<header id="header">
 						<h1><a href="index.html">Agenda</a></h1>
@@ -64,38 +65,16 @@
 													</tr>
 												</thead>
 												<tbody>
-													<tr>
-														<td>Item One</td>
-														<td>Ante turpis integer aliquet porttitor.</td>
-														<td>29.99</td>
-													</tr>
-													<tr>
-														<td>Item Two</td>
-														<td>Vis ac commodo adipiscing arcu aliquet.</td>
-														<td>19.99</td>
-													</tr>
-													<tr>
-														<td>Item Three</td>
-														<td> Morbi faucibus arcu accumsan lorem.</td>
-														<td>29.99</td>
-													</tr>
-													<tr>
-														<td>Item Four</td>
-														<td>Vitae integer tempus condimentum.</td>
-														<td>19.99</td>
-													</tr>
-													<tr>
-														<td>Item Five</td>
-														<td>Ante turpis integer aliquet porttitor.</td>
-														<td>29.99</td>
-													</tr>
+													<c:forEach items="${listaContacto}" var="contacto">
+														<tr>
+															<td>${contacto.getNombre()}</td>
+															<td>${contacto.getTelCasa()}</td>
+															<td>${contacto.getTelMovil()}</td>
+															<td>${contacto.getCorreo()}</td>
+															<td>${contacto.getDireccion()}</td>
+														</tr>
+													</c:forEach>
 												</tbody>
-												<tfoot>
-													<tr>
-														<td colspan="2"></td>
-														<td>100.00</td>
-													</tr>
-												</tfoot>
 											</table>
 										</div>
 

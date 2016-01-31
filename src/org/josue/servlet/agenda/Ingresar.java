@@ -14,6 +14,7 @@ import javax.servlet.http.HttpSession;
 import javax.swing.JOptionPane;
 
 import org.josue.bean.Usuario;
+import org.josue.controlador.ControladorContacto;
 import org.josue.controlador.ControladorUsuario;
 import org.josue.db.Conexion;
 import org.josue.db.Encriptar;
@@ -41,6 +42,7 @@ public class Ingresar extends HttpServlet {
 			}
 			sesion.setAttribute("idUsuario", idUsuario);
 			System.out.println("Sesion iniciada de " + usuario);
+			req.setAttribute("listaContacto", ControladorContacto.getInstancia().listar(idUsuario));
 			despachador=req.getRequestDispatcher("agenda/inicio.jsp");
 			despachador.forward(req, res);
 		}else{

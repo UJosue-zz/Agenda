@@ -8,6 +8,7 @@ public class Contacto {
 	private String correo;
 	private String direccion;
 	private Integer idUsuario;
+	
 	public Integer getIdContacto() {
 		return idContacto;
 	}
