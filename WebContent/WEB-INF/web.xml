@@ -52,4 +52,20 @@
     <servlet-name>EditarContacto</servlet-name>
     <url-pattern>/EditarContacto.do</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>CerrarSesion</servlet-name>
+    <servlet-class>org.josue.servlet.agenda.CerrarSesion</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CerrarSesion</servlet-name>
+    <url-pattern>/CerrarSesion.do</url-pattern>
+  </servlet-mapping>
+    <servlet>
+    <servlet-name>Home</servlet-name>
+    <servlet-class>org.josue.servlet.agenda.Home</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Home</servlet-name>
+    <url-pattern>/Home.do</url-pattern>
+  </servlet-mapping>
 </web-app>

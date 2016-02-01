@@ -27,10 +27,10 @@
 						<div class="inner">
 							<h2>Menu</h2>
 							<ul class="links">
-								<li><a href="#TablaContactos">Contactos</a></li>
-								<li><a href="#NuevoContacto">Agregar Contacto</a></li>
-								<li><a href="elements.html">Configuración</a></li>
-								<li><a href="#">Sign Out</a></li>
+								<li><a action="#">Contactos</a></li>
+								<li><a href="#">Agregar Contacto</a></li>
+								<li><a href="#">Configuración</a></li>
+								<li><a href="CerrarSesion.do">Sign Out</a></li>
 							</ul>
 							<a href="#" class="close">Close</a>
 						</div>
